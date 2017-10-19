@@ -1,5 +1,5 @@
 # Chimera Code Style
-**En esta mini-guía se detallan los puntos básicos a tener en cuenta al momento de escribir código en c# o c++ (ejemplo en c# pero aplicables a ambos) en cualquier proyecto usando Unreal Engine o Unity 3D en Chimera Digital, el objetivo de esta guía es unificar el estilo al escribir código y hacerlo más legible para todo el equipo de programación.**
+**En esta mini-guía se detallan los puntos básicos a tener en cuenta al momento de escribir código en c# o c++ (ejemplos en c# pero aplicables para ambos) en cualquier proyecto usando Unreal Engine o Unity 3D en Chimera Digital, el objetivo de esta guía es unificar el estilo al escribir código y hacerlo más legible para todo el equipo de programación.**
 
 # Tabulación 
 Siempre usar tabulaciones (tabs, equivalen a 4 espacios) para identar el código con espacios iguales, nunca usar múltiples espacios simples para identar.
