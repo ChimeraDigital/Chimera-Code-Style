@@ -5,9 +5,9 @@
 Siempre usar tabulaciones (tabs, equivalen a 4 espacios) para identar el código con espacios iguales, nunca usar múltiples espacios simples para identar.
 Ejemplo: 
 ```csharp
-if ( value ) { 
+if (value) { 
   //Identado 
-  if ( value ) { 
+  if (value) { 
     //Identado X2 
   } 
 }
@@ -16,12 +16,12 @@ if ( value ) {
 # Espacio entre paréntesis
 Mantener un espacio simple entre el contenido de paréntesis entre operadores. 
 
-**Esribir** ` ( y * x + ( n ) ) ` **en lugar de** ` (y*x+(n)) `
+**Esribir** `(y * x + (n)) ` **en lugar de** ` (y*x+(n)) `
 
 # Llaves 
 Siempre usar llaves en funciones, definiciones etc.  para evitar la mas mínima confusión evitar omitir las llaves en aquellos casos que sea posible como en las condiciones. 
 
-**Escribir** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
+**Escribir** `if (value) { //DO }` **en lugar de** `if (value) //DO `
  
 # Nombres
 Las funciones, clases y encapsulados siempre se nombran iniciando con mayúscula y las variables con minúscula. 
@@ -35,6 +35,16 @@ class MyClass { //Clase inicia con mayúscula
   } 
 }
 ```
+En el caso de Unity 3D, para las variables que referencien componentes usaremos un prefijo con el nombre del componente antes de la variable separado por guion bajo (evitar el guion bajo salvo en este tipo de excepciones). Esto con el fin de facilitar su lectura en el inspector.
+**Ejemplo**
+```csharp
+class MyClass { 
+  Transform transform_target = 0; //Variable que referencia un componente de tipo Transform
+  Text text_nameHolder = 0; //Variable que referencia un componente de tipo Text
+  Animator animator_hairAnimator = 0; //Variable que referencia un componente de tipo Animator
+}
+```
+
 También deben ser muy claros los nombres que le damos a las variables y métodos, que presenten su contenido y función respectivamente para no dar lugar a malinterpretación y sea más fácil de entender..
 **Escribir**
 ```csharp
@@ -118,6 +128,25 @@ void DoSomething()
   {
     Log("Null reference...")
   }
+}
+```
+
+# Comentarios
+Los comentarios son especialmente útiles en funciones con parámetros y/o con retorno. Es importante especificar el fin o contenido esperado en cada parámetro y en el caso de las funciones con retorno especificar qué podemos esperar al retorno.
+```csharp
+/// <summary>
+///  Reduce health value applying damage
+/// </summary>
+/// <param name="_damage">Amount of health points to remove</param>
+void ApplyDamage(float _damage)
+{
+  helath -+ _damage;
+}
+
+/// <returns>Returns a Int value with the age of the player</returns>
+int GetPlayerAge()
+{
+  return myAge;
 }
 ```
 
