@@ -23,21 +23,14 @@ Siempre usar llaves en funciones, definiciones etc.  para evitar la mas mínima 
 
 **Escribir ** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
  
-# Prefijos
-Usar prefijos para diferenciar de manera mas simple el origen y contexto de las variables, por ejemplo `m_miEntero = 0;` **en lugar de** `miEntero = 0;`
-* m_ para variables globales o miembros de la clase
-* s_ para variables estáticas
-* c_ para constantes
-* e_ para eventos
-* _ guion bajo solo para variables locales de funciones/métodos
- 
 # Nombres
 Las funciones, clases y encapsulados siempre se nombran iniciando con mayúscula y las variables con minúscula. 
 **Ejemplo:**
 ```csharp
 class MyClass { //Clase inicia con mayúscula
-  int m_myInt = 0; //Variable inicia con minúscula
-  function MyFunction( ){ //Método inicia con mayúscula
+  int myInt = 0; //Variable inicia con minúscula
+  function MyFunction(int _param){ //Método inicia con mayúscula
+    var _someData = 0; //usar guion bajo para variables locales y parámetros 
     //DO 
   } 
 }
@@ -46,8 +39,8 @@ También deben ser muy claros los nombres que le damos a las variables y método
 **Escribir**
 ```csharp
 class ZombieEnemyBehaviour { //Clase que va a definir el comportamiento de un personaje
-  int m_lifeCount = 3; //Contador de vidas
-  float m_runSpeed = 10; //Velocidad de carrera (correr)
+  int lifeCount = 3; //Contador de vidas
+  float runSpeed = 10; //Velocidad de carrera (correr)
   function Shoot( ){ //Simplemente disparar
     //DO 
   } 
@@ -56,8 +49,8 @@ class ZombieEnemyBehaviour { //Clase que va a definir el comportamiento de un pe
 **En lugar de**
 ```csharp
 class Enemy2 { //Evitar nombres ambiguos
-  int m_l = 3; //Evitar nombres ambiguos
-  float m_s = 10; //Evitar nombres ambiguos
+  int l = 3; //Evitar nombres ambiguos
+  float s = 10; //Evitar nombres ambiguos
   function Sh( ){ //Evitar nombres ambiguos
     //DO 
   } 
@@ -67,9 +60,10 @@ class Enemy2 { //Evitar nombres ambiguos
 
 
 # CamelCase
-Al nombrar cualquier clase, objeto o función se debe usar la convención 'CamelCase' donde separamos las palabras con mayúsculas. 
+Al nombrar cualquier clase, objeto o función se debe usar la convención 'CamelCase' donde separamos las palabras con mayúsculas. Las variables las iniciamos con minúscula mientras que clases y funciones con mayúscula.
 
-**Escribir** `int _miVariableEntera` **en lugar de** `int _mivariablenetera`
+**Escribir** `int myIntVariable` **en lugar de** `int myintvariable` 
+**y escribir** `void ResetLifeCounter()` **en lugar de** `void resetlifecounter()` **o** `void resetLifeCounter()`
 
 # Sobrecarga 
 Evitar la sobrecarga de métodos/funciones tanto como sea posible, siempre crear métodos con objetivos muy específicos y que sea claro cuál es su función con solo leer el nombre. 
