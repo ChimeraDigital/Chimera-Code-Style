@@ -21,7 +21,7 @@ Mantener un espacio simple entre el contenido de paréntesis entre operadores.
 # Llaves 
 Siempre usar llaves en funciones, definiciones etc.  para evitar la mas mínima confusión evitar omitir las llaves en aquellos casos que sea posible como en las condiciones. 
 
-**Escribir ** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
+**Escribir** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
  
 # Nombres
 Las funciones, clases y encapsulados siempre se nombran iniciando con mayúscula y las variables con minúscula. 
