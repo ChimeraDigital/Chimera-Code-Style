@@ -140,7 +140,7 @@ Los comentarios son especialmente útiles en funciones con parámetros y/o con r
 /// <param name="_damage">Amount of health points to remove</param>
 void ApplyDamage(float _damage)
 {
-  helath -= _damage;
+  heath -= _damage;
 }
 
 /// <returns>Returns a Int value with the age of the player</returns>
@@ -150,4 +150,4 @@ int GetPlayerAge()
 }
 ```
 
-## Adicional a alas reglas aquí mencionadas en el caso de Unreal Engine también es importante tener en cuenta el estándar de programación oficial de Unreal [Unreal Engine Coding Standard](https://docs.unrealengine.com/latest/INT/Programming/Development/CodingStandard/)
+## Adicional a las reglas aquí mencionadas en el caso de Unreal Engine también es importante tener en cuenta el estándar de programación oficial de Unreal [Unreal Engine Coding Standard](https://docs.unrealengine.com/latest/INT/Programming/Development/CodingStandard/)
