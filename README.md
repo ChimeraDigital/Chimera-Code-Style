@@ -140,7 +140,7 @@ Los comentarios son especialmente útiles en funciones con parámetros y/o con r
 /// <param name="_damage">Amount of health points to remove</param>
 void ApplyDamage(float _damage)
 {
-  helath -+ _damage;
+  helath -= _damage;
 }
 
 /// <returns>Returns a Int value with the age of the player</returns>
