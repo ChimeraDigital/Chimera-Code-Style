@@ -21,7 +21,7 @@ Mantener un espacio simple entre el contenido de paréntesis entre operadores.
 # Llaves 
 Siempre usar llaves en funciones, definiciones etc.  para evitar la mas mínima confusión evitar omitir las llaves en aquellos casos que sea posible como en las condiciones. 
 
-**Escribir** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
+**Escribir ** `if ( value ) { //DO }` **en lugar de** `if ( value ) //DO `
  
 # Prefijos
 Usar prefijos para diferenciar de manera mas simple el origen y contexto de las variables, por ejemplo `m_miEntero = 0;` **en lugar de** `miEntero = 0;`
@@ -33,7 +33,7 @@ Usar prefijos para diferenciar de manera mas simple el origen y contexto de las 
  
 # Nombres
 Las funciones, clases y encapsulados siempre se nombran iniciando con mayúscula y las variables con minúscula. 
-**Ejemplos: **
+**Ejemplo:**
 ```csharp
 class MyClass { //Clase inicia con mayúscula
   int m_myInt = 0; //Variable inicia con minúscula
@@ -42,6 +42,29 @@ class MyClass { //Clase inicia con mayúscula
   } 
 }
 ```
+También deben ser muy claros los nombres que le damos a las variables y métodos, que presenten su contenido y función respectivamente para no dar lugar a malinterpretación y sea más fácil de entender..
+**Escribir**
+```csharp
+class ZombieEnemyBehaviour { //Clase que va a definir el comportamiento de un personaje
+  int m_lifeCount = 3; //Contador de vidas
+  float m_runSpeed = 10; //Velocidad de carrera (correr)
+  function Shoot( ){ //Simplemente disparar
+    //DO 
+  } 
+}
+```
+**En lugar de**
+```csharp
+class Enemy2 { //Evitar nombres ambiguos
+  int m_l = 3; //Evitar nombres ambiguos
+  float m_s = 10; //Evitar nombres ambiguos
+  function Sh( ){ //Evitar nombres ambiguos
+    //DO 
+  } 
+}
+```
+*Hay que destacar que las variables las nombramos con **sustantivos** y los métodos con **verbos** que describan el resultado a lograr o el retorno esperado si aplica.*
+
 
 # CamelCase
 Al nombrar cualquier clase, objeto o función se debe usar la convención 'CamelCase' donde separamos las palabras con mayúsculas. 
@@ -103,3 +126,5 @@ void DoSomething()
   }
 }
 ```
+
+## Adicional a alas reglas aquí mencionadas en el caso de Unreal Engine también es importante tener en cuenta el estándar de programación oficial de Unreal [Unreal Engine Coding Standard](https://docs.unrealengine.com/latest/INT/Programming/Development/CodingStandard/)
