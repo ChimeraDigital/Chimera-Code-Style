@@ -1,3 +1,6 @@
+# Chimera Code Style
+**En esta mini-guía se detallan los puntos básicos a tener en cuenta al momento de escribir código en c# o c++ (ejemplo en c# pero aplicables a ambos) en cualquier proyecto usando Unreal Engine o Unity 3D en Chimera Digital, el objetivo de esta guía es unificar el estilo al escribir código y hacerlo más legible para todo el equipo de programación.**
+
 # Tabulación 
 Siempre usar tabulaciones (tabs, equivalen a 4 espacios) para identar el código con espacios iguales, nunca usar múltiples espacios simples para identar.
 Ejemplo: 
@@ -73,4 +76,30 @@ void Shoot( int _layer )
 }
 ```
  
- 
+ # Inicialización 
+Inicializar variables siempre que sea posible y validar que no sean nulas antes de realizar cualquier operación. Al verificar si una variable es nula hacerlo de manera literal. **Escribir** `if ( MyType != null )` en lugar de `if ( MyType )`
+```csharp
+MyType* m_objectA = nullptr; //c++
+MyType m_objectB = null;
+void DoSomething()
+{
+/*****************Pointers************************/
+  if ( m_objectA != nullptr )
+  {
+    //DO
+  }
+  else
+  {
+    Log("Null reference...")
+  }
+/*****************Variables********************/
+  if ( m_objectB != null )
+  {
+    //DO
+  }
+  else
+  {
+    Log("Null reference...")
+  }
+}
+```
